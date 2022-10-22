@@ -1,21 +1,21 @@
 {
   "categorias": [
     {
-      "titulo": "Front End",
-      "link": "https://www.alura.com.br/formacao-front-end",
-      "cor": "#6BD1FF",
+      "titulo": "Filmes de Terror",
+      "link": "https://www.youtube.com/watch?v=_MVAWLMAXOY",
+      "cor": "#000",
       "link_extra": {
-        "text": "Formação de Front End na Alura",
-        "url": "https://www.alura.com.br/cursos-online-front-end"
+        "text": "Lançamentos",
+        "url": "https://www.adorocinema.com/noticias/filmes/noticia-161881/"
       },
       "videos": [
         {
-          "titulo": "O que faz uma desenvolvedora front-end? #HipstersPontoTube",
-          "url": "https://www.youtube.com/watch?v=ZY3-MFxVdEw"
+          "titulo": "A luz do demônio",
+          "url": "https://www.youtube.com/watch?v=B9HX2KLwngg"
         },
         {
-          "titulo": "SEO com React",
-          "url": "https://www.youtube.com/watch?v=c8mVlakBESE"
+          "titulo": "Rogai por nós",
+          "url": "https://www.youtube.com/watch?v=5OKXI2Q-AnM"
         },
         {
           "titulo": "Componentização com VanillaJS #AluraMais",
@@ -40,7 +40,7 @@
         {
           "titulo": "Base para aprender os frameworks",
           "url": "https://www.youtube.com/watch?v=QzDjdlF1BQI"
-        }        
+        }
       ]
     },
     {
@@ -66,7 +66,7 @@
         {
           "titulo": "API: Dicionário do Programador",
           "url": "https://www.youtube.com/watch?v=vGuqKIRWosk"
-        }, 
+        },
         {
           "titulo": "Usando Git Direito",
           "url": "https://www.youtube.com/watch?v=6OokP-NE49k"
