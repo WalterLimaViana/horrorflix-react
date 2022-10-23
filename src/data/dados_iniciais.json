@@ -10,12 +10,12 @@
       },
       "videos": [
         {
-          "titulo": "A luz do demônio",
-          "url": "https://www.youtube.com/watch?v=B9HX2KLwngg"
-        },
-        {
           "titulo": "Rogai por nós",
           "url": "https://www.youtube.com/watch?v=5OKXI2Q-AnM"
+        },
+        {
+          "titulo": "A luz do demônio",
+          "url": "https://www.youtube.com/watch?v=B9HX2KLwngg"
         },
         {
           "titulo": "Componentização com VanillaJS #AluraMais",
