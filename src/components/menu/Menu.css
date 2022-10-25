@@ -14,7 +14,7 @@
   z-index: 100;
 
   display: flex;
-  justify-content: space-between;
+  justify-content: flex;
   align-items: center;
 
   position: fixed;
@@ -41,6 +41,9 @@ body {
     padding-top: var(--bodyPaddingTop);
   }
 }
+.Inicio {
+  margin-left: 100vh;
+}
 
 .ButtonLink {
   color: var(--white);
@@ -56,6 +59,8 @@ body {
   text-decoration: none;
   display: inline-block;
   transition: opacity 0.3s;
+  margin-right: 1%;
+  position: relative;
 }
 .ButtonLink:hover,
 .ButtonLink:focus {

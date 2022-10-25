@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const ContentAreaContainer = styled.section`
   margin-left: 5%;
-  margin-right: 5%;
+  margin-right: 5%;  
   height: 100%;
   display: flex;
   align-items: center;
@@ -16,9 +16,10 @@ export const ContentAreaContainer = styled.section`
 `;
 
 ContentAreaContainer.Item = styled.div`
+  
   width: 50%;
   display: inline-block;
-  margin-bottom: 50px;
+  margin-bottom: 50px;  
   @media (max-width: 800px) {
     width: 100%;
   }
@@ -37,6 +38,7 @@ ContentAreaContainer.Category = styled.h1`
   padding: 25px;
   line-height: 1;
   border-radius: 4px;
+  
 
   @media (max-width: 800px) {
     display: none;
@@ -46,6 +48,7 @@ ContentAreaContainer.Category = styled.h1`
 `;
 
 ContentAreaContainer.Description = styled.p`
+    
   @media (max-width: 800px) {
     display: none;
   }
