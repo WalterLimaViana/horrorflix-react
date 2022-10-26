@@ -17,7 +17,7 @@ function CadastroCategoria() {
                 </label>
 
                 <button>
-                    Cadastrar
+                    Cadastrar Video
                 </button>
             </form>
 
