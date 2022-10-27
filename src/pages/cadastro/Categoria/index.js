@@ -34,9 +34,9 @@ function CadastroCategoria() {
             </form>
 
             <ul>
-                {categorias.map((categoria) => {
+                {categorias.map((categoria, indice) => {
                     return (
-                        <li key={categoria}>
+                        <li key={`${categoria}${indice}`}>
                             {categoria}
                         </li>
                     )
