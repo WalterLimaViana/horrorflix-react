@@ -4,29 +4,61 @@ import PageDefault from '../../../components/PageDefault';
 
 function CadastroCategoria() {
     const [categorias, setCategorias] = useState(['Teste']);
-    const [nomeDaCategoria, setNomeDaCategoria] = useState('Valor Inicial');
+
+    const valoresIniciais = {
+        nome: '',
+        descricao: '',
+        cor: '#000',
+    }
+    const [nomeDaCategoria, setNomeDaCategoria] = useState(valoresIniciais);
+
     return (
         <PageDefault>
             <h1>Cadastro de Categoria: {nomeDaCategoria}</h1>
 
-            <form onSubmit={function handleSubmit(infosDoEvento) {
+            <form style={{ background: nomeDaCategoria }} onSubmit={function handleSubmit(infosDoEvento) {
                 infosDoEvento.preventDefault();
                 setCategorias([
                     ...categorias,
                     nomeDaCategoria
                 ]);
             }}>
-
-                <label>
-                    Nome da Categoria:
-                    <input
-                        type="text"
-                        value={nomeDaCategoria}
-                        onChange={function funcaoHandlerQueOErroPediu(infosDoEvento) {
-                            setNomeDaCategoria(infosDoEvento.target.value);
-                        }}
-                    />
-                </label>
+                <div>
+                    <label>
+                        Nome da Categoria:
+                        <input
+                            type="text"
+                            value={nomeDaCategoria}
+                            onChange={function funcaoHandlerQueOErroPediu(infosDoEvento) {
+                                setNomeDaCategoria(infosDoEvento.target.value);
+                            }}
+                        />
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        Descrição:
+                        <textarea
+                            type="text"
+                            value={nomeDaCategoria}
+                            onChange={function funcaoHandlerQueOErroPediu(infosDoEvento) {
+                                setNomeDaCategoria(infosDoEvento.target.value);
+                            }}
+                        />
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        Cor:
+                        <input
+                            type="color"
+                            value={nomeDaCategoria}
+                            onChange={function funcaoHandlerQueOErroPediu(infosDoEvento) {
+                                setNomeDaCategoria(infosDoEvento.target.value);
+                            }}
+                        />
+                    </label>
+                </div>
 
                 <button>
                     Cadastrar Video
