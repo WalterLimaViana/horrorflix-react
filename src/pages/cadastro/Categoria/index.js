@@ -3,14 +3,26 @@ import { Link } from 'react-router-dom';
 import PageDefault from '../../../components/PageDefault';
 
 function CadastroCategoria() {
-    const [categorias, setCategorias] = useState(['Teste']);
 
     const valoresIniciais = {
         nome: 'Categoria Inicial',
         descricao: 'Descrição Inicial',
         cor: '#000',
     }
+    const [categorias, setCategorias] = useState([]);
     const [values, setValues] = useState(valoresIniciais);
+
+    function setValue(chave, valor) {
+        setValues({
+            ...values,
+            [chave]: valor,
+        })
+    }
+
+    function handleChange(infosDoEvento) {
+        setValue(infosDoEvento.target.getAttribute('name'),
+            infosDoEvento.target.value);
+    }
 
     return (
         <PageDefault>
@@ -20,18 +32,18 @@ function CadastroCategoria() {
                 infosDoEvento.preventDefault();
                 setCategorias([
                     ...categorias,
-                    values.nome
+                    values
                 ]);
             }}>
+
                 <div>
                     <label>
                         Nome da Categoria:
                         <input
                             type="text"
                             value={values.nome}
-                            onChange={function funcaoHandlerQueOErroPediu(infosDoEvento) {
-                                // setValues(infosDoEvento.target.value);
-                            }}
+                            name="nome"
+                            onChange={handleChange}
                         />
                     </label>
                 </div>
@@ -41,9 +53,8 @@ function CadastroCategoria() {
                         <textarea
                             type="text"
                             value={values.descricao}
-                            onChange={function funcaoHandlerQueOErroPediu(infosDoEvento) {
-                                // setValues(infosDoEvento.target.value);
-                            }}
+                            name="descricao"
+                            onChange={handleChange}
                         />
                     </label>
                 </div>
@@ -53,9 +64,8 @@ function CadastroCategoria() {
                         <input
                             type="color"
                             value={values.cor}
-                            onChange={function funcaoHandlerQueOErroPediu(infosDoEvento) {
-                                // setValues(infosDoEvento.target.value);
-                            }}
+                            name="cor"
+                            onChange={handleChange}
                         />
                     </label>
                 </div>
@@ -69,7 +79,7 @@ function CadastroCategoria() {
                 {categorias.map((categoria, indice) => {
                     return (
                         <li key={`${categoria}${indice}`}>
-                            {categoria}
+                            {categoria.nome}
                         </li>
                     )
                 })}
