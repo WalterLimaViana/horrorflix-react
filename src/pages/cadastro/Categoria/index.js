@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import FormField from '../../../components/Carousel/components/FormField';
 import PageDefault from '../../../components/PageDefault';
 
 function CadastroCategoria() {
@@ -36,18 +37,22 @@ function CadastroCategoria() {
                 ]);
             }}>
 
-                <div>
-                    <label>
-                        Nome da Categoria:
-                        <input
-                            type="text"
-                            value={values.nome}
-                            name="nome"
-                            onChange={handleChange}
-                        />
-                    </label>
-                </div>
-                <div>
+                <FormField
+                    label="Nome da Categoria"
+                    value={values.nome}
+                    type="text"
+                    name="nome"
+                    onChange={handleChange}
+                ></FormField>
+
+                <FormField
+                    label="Descrição"
+                    value={values.descricao}
+                    type="text"
+                    name="descricao"
+                    onChange={handleChange}
+                ></FormField>
+                {/* <div>
                     <label>
                         Descrição:
                         <textarea
@@ -57,8 +62,15 @@ function CadastroCategoria() {
                             onChange={handleChange}
                         />
                     </label>
-                </div>
-                <div>
+                </div> */}
+                <FormField
+                    label="cor"
+                    value={values.cor}
+                    type="color"
+                    name="cor"
+                    onChange={handleChange}
+                ></FormField>
+                {/* <div>
                     <label>
                         Cor:
                         <input
@@ -68,7 +80,7 @@ function CadastroCategoria() {
                             onChange={handleChange}
                         />
                     </label>
-                </div>
+                </div> */}
 
                 <button>
                     Cadastrar Video
