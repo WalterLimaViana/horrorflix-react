@@ -6,9 +6,9 @@ import PageDefault from '../../../components/PageDefault';
 function CadastroCategoria() {
 
     const valoresIniciais = {
-        nome: 'Categoria Inicial',
-        descricao: 'Descrição Inicial',
-        cor: '#000',
+        nome: '',
+        descricao: '',
+        cor: '',
     }
     const [categorias, setCategorias] = useState([]);
     const [values, setValues] = useState(valoresIniciais);
@@ -39,17 +39,17 @@ function CadastroCategoria() {
 
                 <FormField
                     label="Nome da Categoria"
-                    value={values.nome}
                     type="text"
                     name="nome"
+                    value={values.nome}
                     onChange={handleChange}
                 ></FormField>
 
                 <FormField
                     label="Descrição"
-                    value={values.descricao}
                     type="text"
                     name="descricao"
+                    value={values.descricao}
                     onChange={handleChange}
                 ></FormField>
                 {/* <div>
@@ -65,9 +65,9 @@ function CadastroCategoria() {
                 </div> */}
                 <FormField
                     label="cor"
-                    value={values.cor}
                     type="color"
                     name="cor"
+                    value={values.cor}
                     onChange={handleChange}
                 ></FormField>
                 {/* <div>
