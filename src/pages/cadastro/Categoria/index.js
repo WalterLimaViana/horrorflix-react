@@ -4,12 +4,11 @@ import FormField from '../../../components/Carousel/components/FormField';
 import PageDefault from '../../../components/PageDefault';
 
 function CadastroCategoria() {
-
     const valoresIniciais = {
         nome: '',
         descricao: '',
         cor: '',
-    }
+    };
     const [categorias, setCategorias] = useState([]);
     const [values, setValues] = useState(valoresIniciais);
 
@@ -17,25 +16,32 @@ function CadastroCategoria() {
         setValues({
             ...values,
             [chave]: valor,
-        })
+        });
     }
 
     function handleChange(infosDoEvento) {
-        setValue(infosDoEvento.target.getAttribute('name'),
-            infosDoEvento.target.value);
+        setValue(
+            infosDoEvento.target.getAttribute('name'),
+            infosDoEvento.target.value,
+        );
     }
 
     return (
         <PageDefault>
-            <h1>Cadastro de Categoria: {values.nome}</h1>
+            <h1>
+                Cadastro de Categoria:
+                {' '}
+                {values.nome}
+            </h1>
 
             <form onSubmit={function handleSubmit(infosDoEvento) {
                 infosDoEvento.preventDefault();
                 setCategorias([
                     ...categorias,
-                    values
+                    values,
                 ]);
-            }}>
+            }}
+            >
 
                 <FormField
                     label="Nome da Categoria"
@@ -43,7 +49,7 @@ function CadastroCategoria() {
                     name="nome"
                     value={values.nome}
                     onChange={handleChange}
-                ></FormField>
+                />
 
                 <FormField
                     label="Descrição"
@@ -51,7 +57,7 @@ function CadastroCategoria() {
                     name="descricao"
                     value={values.descricao}
                     onChange={handleChange}
-                ></FormField>
+                />
                 {/* <div>
                     <label>
                         Descrição:
@@ -69,7 +75,7 @@ function CadastroCategoria() {
                     name="cor"
                     value={values.cor}
                     onChange={handleChange}
-                ></FormField>
+                />
                 {/* <div>
                     <label>
                         Cor:
@@ -88,22 +94,18 @@ function CadastroCategoria() {
             </form>
 
             <ul>
-                {categorias.map((categoria, indice) => {
-                    return (
-                        <li key={`${categoria}${indice}`}>
-                            {categoria.nome}
-                        </li>
-                    )
-                })}
+                {categorias.map((categoria, indice) => (
+                    <li key={`${categoria}${indice}`}>
+                        {categoria.nome}
+                    </li>
+                ))}
             </ul>
-
-
 
             <Link to="/">
                 Ir para home
             </Link>
         </PageDefault>
-    )
+    );
 }
 
 export default CadastroCategoria;
